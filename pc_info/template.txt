@@ -1,0 +1,8 @@
+Serial Number:
+Computer ID:
+PC Name:
+Processor:
+Memory ( RAM):
+Storage:
+OS:
+Display:

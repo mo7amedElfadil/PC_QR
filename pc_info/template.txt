@@ -6,3 +6,6 @@ Memory ( RAM):
 Storage:
 OS:
 Display:
+Software Installed:
+Users:
+Disk Partition:

@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
     try {
       ScanResult qrResult = await BarcodeScanner.scan();
       result = qrResult.rawContent;
-      await _postPy(result.toString());
+      await _postPy(result);
 
       await _getPy();
 
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
       }
     } on FormatException {
       setState(() {
-        result = "There is an error somewhere";
+        result = "This is not a supported QR code";
       });
     } catch (ex) {
       setState(() {
@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
   }
 
     Future<void> _getPy() async{
-    txt = "test";
+
     Uri myUri = Uri.parse('http://127.0.0.1:5000/id');
     final response1 = await http.get(myUri);
 

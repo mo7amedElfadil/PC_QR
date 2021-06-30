@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
 
   Future<void> _postPy(result) async{
     Uri myUri = Uri.parse('http://127.0.0.1:5000/id');
-    final response2 = await http.post(myUri, body: json.encode({'id': int.parse(result)}));
+    final response2 = await http.post(myUri, body: json.encode({'id': result}));
 
 
   }
@@ -123,7 +123,9 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(
                   width: 340,
-                  height: 100,
+                  height: 200,
+                  child: new SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
                   child: Text(
                     '$result   ',
                     style: TextStyle(
@@ -133,7 +135,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-              ],
+                ),],
             ),
             SizedBox(
               height: 40.0,
